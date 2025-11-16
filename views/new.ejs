@@ -1,0 +1,48 @@
+<% layout("/layouts/boilerplate") %>
+<body>
+    <div class="row">
+        <div class="col-8 offset-2">
+            <form method="post" action="/listing" novalidate class="needs-validation" enctype="multipart/form-data">
+                <br><br>
+                <h2>Create a New Listing</h2>
+
+                <div class="mb-3">
+                     <label for="title" class="form-label">Title</label>
+                     <input type="text" name="listing[title]" id="" placeholder=" Add a Catchy Title"
+                            class="form-control" required>
+                </div>
+        
+                <div class="mb-3">
+                     <label for="description" class="form-label">Description</label>
+                     <textarea name="listing[description]" id="" placeholder=" Description" class="form-control" required></textarea>
+                </div>
+
+                <div class="mb-3">
+                   <label for="Image" class="form-label">Upload Image</label>
+                   <input type="file" name="listing[Image]" id="" placeholder="choose Image" class="form-control" required>
+                </div>
+
+               <div class="mb-3">
+                   <label for="price" class="form-label">Price</label>
+                   <input type="number" name="listing[price]" id="" placeholder="Enter price" class="form-control" required>
+                </div>
+
+                <div class="mb-3">
+                  <label for="location" class="form-label">Location</label>
+                  <input type="text" name="listing[location]" id="" placeholder="Enter location" class="form-control" required>
+                </div>
+        
+                 <div class="mb-3">
+                    <label for="country" class="form-label">Country</label>
+                    <input type="text" name="listing[country]" id="" placeholder="Enter country" class="form-control" required>
+                </div>
+                <br><br>
+
+                <button class="btn btn-dark add-btn">Add</button>
+                <br><br>
+
+            </form>
+
+        </div>
+    </div>
+</body>

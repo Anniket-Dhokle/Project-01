@@ -1,0 +1,54 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head> -->
+<% layout("/layouts/boilerplate") %>
+<body>
+    <div class="row">
+    <div class="col-8 offset-2">
+    <form method="post" action="/listing/<%= list._id%>?_method=PUT" novalidate class="needs-validation" enctype="multipart/form-data">
+        <div class="mb-3">
+            <br><br>
+            <label for="title" class="form-label">Title</label>
+            <input type="text" name="title" id="" value="<%= list.title %>"
+                class="form-control" required>
+        </div>
+        <div class="mb-3">
+            <label for="description" class="form-label">Description</label>
+            <textarea name="description" class="form-control" id="" required><%= list.description %></textarea>
+        </div>
+        <div class="mb-3">
+            <label for="">original Image</label>
+            <img src="<%= originalImageUrl %>" alt="">
+
+        </div>
+
+        <div class="mb-3">
+            <label for="Image" class="form-label">Upload Image</label>
+            <input type="file" name="Image[url]" id="" class="form-control">
+
+        </div>
+        <div class="mb-3">
+            <label for="price" class="form-label">Price</label>
+            <input type="number" name="price"  value="<%= list.price %>" class="form-control" required>
+
+        </div>
+        <div class="mb-3">
+            <label for="location" class="form-label">Location</label>
+             <input type="text" name="location"  value="<%= list.location %>" class="form-control" required>
+        </div>
+        <div class="mb-3">
+            <label for="country" class="form-label">Country</label>
+             <input type="text" name="country" id="" value="<%= list.country %>" class="form-control" required>
+        </div>
+        <br>
+        <button class="btn btn-dark edit-btn">Save</button>
+        <br> <br> <br>
+
+    </form>
+    </div>
+    </div>
+</body>
