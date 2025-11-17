@@ -5,7 +5,6 @@ if(process.env.NODE_ENV != "production"){
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
-const port = 3000;
 const Listing = require("./models/listing.js");
 const path = require("path");
 const methodOverride = require("method-override");
@@ -20,6 +19,7 @@ const flash = require("connect-flash");
 const passport = require("passport");
 const LocalStrategy = require("passport-local");
 const User = require("./models/user.js");
+const PORT = process.env.PORT || 3000;
 
 const MONGO_DB_URL = process.env.MONGO_ATLAS_URL;       //mongoose Atlas URL
 
